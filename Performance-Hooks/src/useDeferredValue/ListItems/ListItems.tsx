@@ -1,5 +1,5 @@
-import { Item } from "./ItemModel";
-import ListItem from "./ListItem";
+import { Item } from "../ItemModel";
+import ListItem from "../ListItem/ListItem";
 
 interface ListItemsProps {
   items: Item[];

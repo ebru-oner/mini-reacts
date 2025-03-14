@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Item } from "./ItemModel";
-import ListItems from "./ListItems";
-import SearchBar from "./SearchBar";
-import { createMockData } from "./createMockData";
+import { Item } from "../ItemModel";
+import ListItems from "../ListItems/ListItems";
+import SearchBar from "../SearchBar/SearchBar";
+import { createMockData } from "../createMockData";
 
 const ItemsContainer = () => {
   const [items, setItems] = useState<Item[]>([]);
@@ -14,7 +14,7 @@ const ItemsContainer = () => {
     setItems(data);
   }, [itemCount]);
 
-  const filteredItems = items.filter((item) => item.title.toLowerCase().includes(searchText.toLowerCase()));
+  const filteredItems = items ? items.filter((item) => item.title.toLowerCase().includes(searchText.toLowerCase())) : [];
 
   const onItemCountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();

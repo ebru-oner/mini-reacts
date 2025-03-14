@@ -1,8 +1,8 @@
 import { startTransition, useEffect, useState } from "react";
-import { Item } from "./ItemModel";
-import ListItems from "./ListItems";
-import SearchBar from "./SearchBar";
-import { createMockData } from "./createMockData";
+import { Item } from "../ItemModel";
+import ListItems from "../ListItems/ListItems";
+import SearchBar from "../SearchBar/SearchBar";
+import { createMockData } from "../createMockData";
 
 const ItemsContainerPerformant = () => {
   const [items, setItems] = useState<Item[]>([]);

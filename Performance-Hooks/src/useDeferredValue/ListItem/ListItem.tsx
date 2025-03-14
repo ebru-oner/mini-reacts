@@ -1,4 +1,4 @@
-import { Item } from "./ItemModel";
+import { Item } from "../ItemModel";
 
 interface ListItemProps {
   item: Item;
